@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class Anasayfa extends StatefulWidget {
   const Anasayfa({super.key});
 
@@ -15,6 +15,9 @@ class _AnasayfaState extends State<Anasayfa> {
     final double ekranGenisligi = ekranBilgisi.size.width;
     print("Yukseklik : $ekranYuksekligi");
     print("Genislik : $ekranGenisligi");
+
+
+    var d = AppLocalizations.of(context);
 
     return Scaffold(
       appBar: AppBar(
@@ -32,7 +35,7 @@ class _AnasayfaState extends State<Anasayfa> {
                 foregroundColor: Colors.black,
               ),
               onPressed: () {},
-              child: const Text("skip"),
+              child: Text(d!.gecButton),
             ),
           ),
         ],
@@ -40,11 +43,10 @@ class _AnasayfaState extends State<Anasayfa> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Padding(
+          Padding(
             padding: EdgeInsets.only(top: 60, left: 20),
             child: Text(
-              "Find best place \n"
-                  "to stay in good price ",
+              d.metin2,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 30,
@@ -54,11 +56,10 @@ class _AnasayfaState extends State<Anasayfa> {
           const SizedBox(
             height: 10,
           ),
-          const Padding(
+          Padding(
             padding: EdgeInsets.only(top: 10, left: 20, bottom: 10),
             child: Text(
-              "Lorem ipsum dolor sit amet, consectetur \n"
-                  "adipiscing elit, sed",
+              d.metin3,
               style: TextStyle(
                 fontSize: 15,
               ),
@@ -68,8 +69,8 @@ class _AnasayfaState extends State<Anasayfa> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
-                height: 536,
-                width: 420,
+                height: 500,
+                width: 432,
                 child: Stack(
                   alignment: Alignment.bottomCenter,
                   children: [
@@ -90,7 +91,7 @@ class _AnasayfaState extends State<Anasayfa> {
                           backgroundColor: Colors.orange,
                         ),
                         onPressed: () {},
-                        child: Text("Next"),
+                        child: Text(d.ileriButton),
                       ),
                     ),
                     Positioned(
@@ -118,3 +119,4 @@ class _AnasayfaState extends State<Anasayfa> {
     );
   }
 }
+//everything is ok

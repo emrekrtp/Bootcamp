@@ -30,6 +30,10 @@ flutter_lints
 2.19
 file:///C:/Users/emrek/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-2.0.3/
 file:///C:/Users/emrek/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-2.0.3/lib/
+intl
+2.12
+file:///C:/Users/emrek/AppData/Local/Pub/Cache/hosted/pub.dev/intl-0.18.1/
+file:///C:/Users/emrek/AppData/Local/Pub/Cache/hosted/pub.dev/intl-0.18.1/lib/
 lints
 3.0
 file:///C:/Users/emrek/AppData/Local/Pub/Cache/hosted/pub.dev/lints-2.1.1/
@@ -90,6 +94,10 @@ flutter
 3.2
 file:///C:/src/flutter/packages/flutter/
 file:///C:/src/flutter/packages/flutter/lib/
+flutter_localizations
+3.2
+file:///C:/src/flutter/packages/flutter_localizations/
+file:///C:/src/flutter/packages/flutter_localizations/lib/
 flutter_test
 3.2
 file:///C:/src/flutter/packages/flutter_test/

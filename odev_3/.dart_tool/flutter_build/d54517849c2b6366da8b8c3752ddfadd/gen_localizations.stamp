@@ -1,1 +1,1 @@
-{"inputs":[],"outputs":[]}
+{"inputs":["C:\\src\\flutter\\packages\\flutter_tools\\lib\\src\\build_system\\targets\\localizations.dart","D:\\bootcamp\\odev_3\\l10n.yaml","D:\\bootcamp\\odev_3\\lib/l10n\\app_en.arb","D:\\bootcamp\\odev_3\\lib/l10n\\app_tr.arb"],"outputs":["D:\\bootcamp\\odev_3\\.dart_tool\\flutter_gen\\gen_l10n\\app_localizations_en.dart","D:\\bootcamp\\odev_3\\.dart_tool\\flutter_gen\\gen_l10n\\app_localizations_tr.dart","D:\\bootcamp\\odev_3\\.dart_tool\\flutter_gen\\gen_l10n\\app_localizations.dart"]}
