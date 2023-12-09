@@ -1,0 +1,12 @@
+com.example.odev_3.app-jetified-window-java-1.0.0-beta04-0 C:\Users\emrek\.gradle\caches\transforms-3\3740bc74f3ccb1b2ca0494eaf0684c87\transformed\jetified-window-java-1.0.0-beta04\res
+com.example.odev_3.app-jetified-annotation-experimental-1.1.0-1 C:\Users\emrek\.gradle\caches\transforms-3\6a9a01ea7229bccb3ed1811cf95cb8b2\transformed\jetified-annotation-experimental-1.1.0\res
+com.example.odev_3.app-core-1.6.0-2 C:\Users\emrek\.gradle\caches\transforms-3\87e24ee8689e985fbc596f6976aab002\transformed\core-1.6.0\res
+com.example.odev_3.app-jetified-window-1.0.0-beta04-3 C:\Users\emrek\.gradle\caches\transforms-3\be87ff3b58bc171252b4850a1dd29885\transformed\jetified-window-1.0.0-beta04\res
+com.example.odev_3.app-debug-4 D:\bootcamp\odev_3\android\app\src\debug\res
+com.example.odev_3.app-main-5 D:\bootcamp\odev_3\android\app\src\main\res
+com.example.odev_3.app-pngs-6 D:\bootcamp\odev_3\build\app\generated\res\pngs\debug
+com.example.odev_3.app-resValues-7 D:\bootcamp\odev_3\build\app\generated\res\resValues\debug
+com.example.odev_3.app-rs-8 D:\bootcamp\odev_3\build\app\generated\res\rs\debug
+com.example.odev_3.app-mergeDebugResources-9 D:\bootcamp\odev_3\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
+com.example.odev_3.app-mergeDebugResources-10 D:\bootcamp\odev_3\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+com.example.odev_3.app-merged_res-11 D:\bootcamp\odev_3\build\app\intermediates\merged_res\debug
