@@ -68,8 +68,8 @@ class _AnasayfaState extends State<Anasayfa> {
             children: [
               Center(
                 child: SizedBox(
-                  height: 50,
-                  width: 50,
+                  height: ekranYuksekligi/16,
+                  width: ekranGenisligi/8,
                   child: Image.asset("resimler/papara.png"),
                 ),
               ),
@@ -87,120 +87,122 @@ class _AnasayfaState extends State<Anasayfa> {
         body: Center(
           child: Padding(
             padding: const EdgeInsets.all(28.0),
-            child: Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    IconButton(
-                      onPressed: () {
-                        print("'-' tıklandı");
-                      },
-                      icon: const Icon(
-                        Icons.remove_circle_outline,
-                        color: Colors.red,
-                        size: 70,
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 20,
-                    ),
-                    const Text(
-                      " ₺",
-                      style: TextStyle(fontSize: 40),
-                    ),
-                    // güncellenecek
-                    const SizedBox(
-                      width: 20,
-                    ),
-                    IconButton(
-                      onPressed: () {
-                        print("'+' tıklandı");
-                      },
-                      icon: const Icon(
-                        Icons.add_circle_outline,
-                        color: Colors.green,
-                        size: 70,
-                      ),
-                    ),
-                  ],
-                ),
-                const Center(
-                  child: Text(
-                    "IBAN : TR999999999999999999999999",
-                    style: TextStyle(fontSize: 9),
-                  ),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Row(
-                  children: [
-                    const Text(
-                      "SON İŞLEMLER",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    IconButton(
-                      onPressed: () {},
-                      icon: const Icon(Icons.arrow_forward),
-                    ),
-                  ],
-                ),
-                FutureBuilder<List<Islemler>>(
-                  future: islemleriYukle(),
-                  builder: (context, snapshot) {
-                    if (snapshot.connectionState == ConnectionState.waiting) {
-                      return Center(child: CircularProgressIndicator());
-                    } else if (snapshot.hasError) {
-                      return Center(
-                        child: Text('Veri getirme hatası'),
-                      );
-                    } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
-                      return Center(
-                        child: Text('Mevcut veri yok'),
-                      );
-                    } else {
-                      var islemlerListesi = snapshot.data!;
-                      return SizedBox(
-                        height: ekranYuksekligi / 2.2,
-                        child: ListView.builder(
-                          itemCount: islemlerListesi.length,
-                          itemBuilder: (context, index) {
-                            var islem = islemlerListesi[index];
-                            return ListTile(
-                              leading: SizedBox(
-                                  height: ekranYuksekligi / 6,
-                                  width: ekranGenisligi / 6,
-                                  child:
-                                      Image.asset("resimler/${islem.resim}")),
-                              title: Text(
-                                "${islem.islemAdi}",
-                                style: TextStyle(fontWeight: FontWeight.bold),
-                              ),
-                              subtitle: Text("${islem.aciklama}"),
-                            );
-                          },
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      IconButton(
+                        onPressed: () {
+                          print("'-' tıklandı");
+                        },
+                        icon: const Icon(
+                          Icons.remove_circle_outline,
+                          color: Colors.red,
+                          size: 70,
                         ),
-                      );
-                    }
-                  },
-                ),
-                ListTile(
-                  leading: SizedBox(
-                      height: ekranYuksekligi / 2,
-                      width: ekranGenisligi / 6,
-                      child: Image.asset("resimler/steam.jpg")),
-                  title: Text(
-                    "Steam",
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      const SizedBox(
+                        width: 20,
+                      ),
+                      const Text(
+                        " ₺",
+                        style: TextStyle(fontSize: 40),
+                      ),
+                      // güncellenecek
+                      const SizedBox(
+                        width: 20,
+                      ),
+                      IconButton(
+                        onPressed: () {
+                          print("'+' tıklandı");
+                        },
+                        icon: const Icon(
+                          Icons.add_circle_outline,
+                          color: Colors.green,
+                          size: 70,
+                        ),
+                      ),
+                    ],
                   ),
-                  subtitle: Text(
-                    "Her ay 25₺ kazan",
+                  const Center(
+                    child: Text(
+                      "IBAN : TR999999999999999999999999",
+                      style: TextStyle(fontSize: 9),
+                    ),
                   ),
-                ),
-              ],
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    children: [
+                      const Text(
+                        "SON İŞLEMLER",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      IconButton(
+                        onPressed: () {},
+                        icon: const Icon(Icons.arrow_forward),
+                      ),
+                    ],
+                  ),
+                  FutureBuilder<List<Islemler>>(
+                    future: islemleriYukle(),
+                    builder: (context, snapshot) {
+                      if (snapshot.connectionState == ConnectionState.waiting) {
+                        return Center(child: CircularProgressIndicator());
+                      } else if (snapshot.hasError) {
+                        return Center(
+                          child: Text('Veri getirme hatası'),
+                        );
+                      } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
+                        return Center(
+                          child: Text('Mevcut veri yok'),
+                        );
+                      } else {
+                        var islemlerListesi = snapshot.data!;
+                        return SizedBox(
+                          height: ekranYuksekligi / 2.2,
+                          child: ListView.builder(
+                            itemCount: islemlerListesi.length,
+                            itemBuilder: (context, index) {
+                              var islem = islemlerListesi[index];
+                              return ListTile(
+                                leading: SizedBox(
+                                    height: ekranYuksekligi / 6,
+                                    width: ekranGenisligi / 6,
+                                    child:
+                                        Image.asset("resimler/${islem.resim}")),
+                                title: Text(
+                                  "${islem.islemAdi}",
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                ),
+                                subtitle: Text("${islem.aciklama}"),
+                              );
+                            },
+                          ),
+                        );
+                      }
+                    },
+                  ),
+                  ListTile(
+                    leading: SizedBox(
+                        height: ekranYuksekligi / 2,
+                        width: ekranGenisligi / 6,
+                        child: Image.asset("resimler/steam.jpg")),
+                    title: Text(
+                      "Steam",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    subtitle: Text(
+                      "Her ay 25₺ kazan",
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
